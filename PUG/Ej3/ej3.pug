@@ -1,0 +1,38 @@
+html
+  head
+    title= tit 
+    link(rel=stylesheet, href="http://cdn_bootstrap.css")
+
+  body
+    div.container
+      form.form-validator(action='/submit', method="post")
+        input(type="text", name='name', required, placeholder="Ingrese su nombre") 
+        br
+        input(type="text", name='dni', required, placeholder="DNI")
+        br
+        select(name='sexo', required)
+          option Seleccionar opción
+          option(value='femenino') Femenino
+          option(value='masculino') Masculino
+        br
+        select(name='profesion', required)
+          option Seleccionar opción
+          option(value='prof_1') Profesion 1
+          option(value='prof_2') Profesion 2
+          option(value='prof_3') Profesion 3
+          option(value='prof_4') Profesion 4
+          option(value='prof_5') Profesion 5
+        br
+        select(name='provincia', required)
+          option Seleccionar opción
+          option(value='baires') Buenos Aires
+          option(value='cba') Córdoba
+          option(value='sl') San Luis
+        br
+        select(name='localidad', disabled)
+          option No existen datos          
+        br
+        input(type="date", name="f_nac", required,  placeholder="Ingrese su fecha de nacimiento")
+        br
+        br
+        button.btn-success(type=submit) Enviar formulario
