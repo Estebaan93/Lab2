@@ -1,0 +1,19 @@
+body{
+  background-image: url("src/3790180.jpg");
+  background-size: 100%;
+  font-family: arial;
+}
+
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.blue {
+  color: blue;
+}
+
+.express, .fruit, .search, .fer{
+  color:white;
+}
