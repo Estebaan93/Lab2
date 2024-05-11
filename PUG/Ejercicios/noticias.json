@@ -1,0 +1,65 @@
+[
+	{
+		"titulo": "Inundacione en Brasil",
+		"descripcion": "La cifra de muertos ascendió a 137 y hay casi dos millones de damnificados, el volumen de lluvia superó los 400 milímetros en los primeros cinco días de mayo en Rio Grande do Sul" ,
+		"categoria": 2,
+		"fecha": "2024-05-11",
+		"url_imagen": "./public/src/Inundaciones_brasil.jpg"
+	},
+	{
+		"titulo": "",
+		"descripcion": "" ,
+		"categoria": "",
+		"fecha": "",
+		"url_imagen": ""
+	},	
+	{
+		"titulo": "",
+		"descripcion": "" ,
+		"categoria": "",
+		"fecha": "",
+		"url_imagen": ""
+	},	
+	{
+		"titulo": "",
+		"descripcion": "" ,
+		"categoria": "",
+		"fecha": "",
+		"url_imagen": ""
+	},
+	{
+		"titulo": "",
+		"descripcion": "" ,
+		"categoria": "",
+		"fecha": "",
+		"url_imagen": ""
+	},
+	{
+		"titulo": "",
+		"descripcion": "" ,
+		"categoria": "",
+		"fecha": "",
+		"url_imagen": ""
+	},
+	{
+		"titulo": "",
+		"descripcion": "" ,
+		"categoria": "",
+		"fecha": "",
+		"url_imagen": ""
+	},
+	{
+		"titulo": "",
+		"descripcion": "" ,
+		"categoria": "",
+		"fecha": "",
+		"url_imagen": ""
+	},	
+	{
+		"titulo": "",
+		"descripcion": "" ,
+		"categoria": "",
+		"fecha": "",
+		"url_imagen": ""
+	}
+]

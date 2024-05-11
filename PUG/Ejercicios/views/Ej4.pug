@@ -1,0 +1,24 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Ejercicio 4
+    link(rel="stylesheet", href="style.css")
+  body
+    main
+      table
+        tr
+          th.th Animal
+          th.th Color
+          th.th Tiene pelo
+          th.th Tiene patas
+        each animal in animales
+          tr
+            td.td= animal.animal
+            td(style=`background-color: ${animal.color}`)
+              | &nbsp;
+            td
+              img(src=`${animal.tienePelo ? 'true-png.png' : 'false-png.png'}`, alt=`${animal.tienePelo}`)
+            td
+              img(src=`${animal.tiene4Patas ? 'true-png.png' : 'false-png.png'}`, alt=`${animal.tiene4patas}`)
