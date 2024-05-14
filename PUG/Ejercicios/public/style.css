@@ -16,13 +16,85 @@ body{
 }
 
 
-.express, .fruit, .search, .fer, .th, .td{
+.express, .fruit, .search, .fer, .th, .td, .divNoticias{
   color:white;
 }
 
+main{
+  display: flex;
+  margin: 4%;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
 
 /*Ejercicio 5*/
 .h1Noticias{
   color: white;
   text-align: center;
+}
+.divNoticias{
+  border: solid 1px white;
+  border-radius:4px;
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0 20%;
+  box-sizing: border-box;
+  margin: 2px;
+}
+.h2Noticia{
+  text-align: center;
+  font-size: 16px;
+  margin: 0% 2% 0% 2%;
+
+}
+.fechaNoticia{
+  font-size: 14px;
+  text-align: center;
+  margin: 0px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.descripcion{
+  margin: 2% 3% 2% 3%;
+  font-size: 14px;
+}
+.formulario{
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.formularioNoticia{
+  width: 480px;
+  display: inline-grid;
+  color: white;
+}
+.mainFor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.h1NuevaNoticia{
+  color: red;
+}
+.buttonNuevaNoticia{
+  margin-top:10px;
+  width: 110px;
+}
+
+.divAgregarBtn{
+  width: 100%;
+  text-align: center;
+  margin: 3%;
+}
+.agregarNoticia{
+  width: 30%;
+/*  text-align: center;*/
+color: white;
+background-color: gray;
+padding: 1% 10% 1% 10%;
+text-decoration: none;
+border-radius: 3px;
 }

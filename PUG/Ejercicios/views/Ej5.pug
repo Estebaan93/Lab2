@@ -9,8 +9,14 @@ html(lang="es")
 		footer
 			h1.h1Noticias Todas las noticias
 		main
-			//each noticia in noticias
+			each noticia in noticias
 				div.divNoticias
 					img(src=noticia.url_imagen, alt=noticia.titulo, class='imgNoticia')
-			
-
+					h2.h2Noticia=noticia.titulo
+					p.fechaNoticia=noticia.fecha
+					p.descripcion=noticia.descripcion
+					form.formulario(action='/noticias/borrar', method='POST')
+						input(type='hidden', name='index', value=noticias.indexOf(noticia))
+						button.btnNoticia(type='submit') Borrar
+			div.divAgregarBtn
+				a(href='/noticias/noticiasInsertar' class='agregarNoticia') Agregar Noticia

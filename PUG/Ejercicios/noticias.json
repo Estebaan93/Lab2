@@ -1,65 +1,64 @@
 [
-	{
-		"titulo": "Inundacione en Brasil",
-		"descripcion": "La cifra de muertos ascendió a 137 y hay casi dos millones de damnificados, el volumen de lluvia superó los 400 milímetros en los primeros cinco días de mayo en Rio Grande do Sul" ,
-		"categoria": 2,
-		"fecha": "2024-05-11",
-		"url_imagen": "./public/src/Inundaciones_brasil.jpg"
-	},
-	{
-		"titulo": "",
-		"descripcion": "" ,
-		"categoria": "",
-		"fecha": "",
-		"url_imagen": ""
-	},	
-	{
-		"titulo": "",
-		"descripcion": "" ,
-		"categoria": "",
-		"fecha": "",
-		"url_imagen": ""
-	},	
-	{
-		"titulo": "",
-		"descripcion": "" ,
-		"categoria": "",
-		"fecha": "",
-		"url_imagen": ""
-	},
-	{
-		"titulo": "",
-		"descripcion": "" ,
-		"categoria": "",
-		"fecha": "",
-		"url_imagen": ""
-	},
-	{
-		"titulo": "",
-		"descripcion": "" ,
-		"categoria": "",
-		"fecha": "",
-		"url_imagen": ""
-	},
-	{
-		"titulo": "",
-		"descripcion": "" ,
-		"categoria": "",
-		"fecha": "",
-		"url_imagen": ""
-	},
-	{
-		"titulo": "",
-		"descripcion": "" ,
-		"categoria": "",
-		"fecha": "",
-		"url_imagen": ""
-	},	
-	{
-		"titulo": "",
-		"descripcion": "" ,
-		"categoria": "",
-		"fecha": "",
-		"url_imagen": ""
-	}
+  {
+    "titulo": "Inundacione en Brasil",
+    "descripcion": "La cifra de muertos ascendió a 137 y hay casi dos millones de damnificados, el volumen de lluvia superó los 400 milímetros en los primeros cinco días de mayo en Rio Grande do Sul.",
+    "categoria": 2,
+    "fecha": "2024-05-11",
+    "url_imagen": "./src/inundaciones.jpg"
+  },
+  {
+    "titulo": "Un grupo de científicos descubrió una “falla cósmica” que desafía la teoría de la relatividad de Einstein",
+    "descripcion": "Los físicos, de Canadá, revelaron anomalías en la gravedad a escalas galácticas, planteando interrogantes sobre la validez de la relatividad.",
+    "categoria": 4,
+    "fecha": "2024-01-11",
+    "url_imagen": "./src/fallaCosmica.jpg"
+  },
+  {
+    "titulo": "¿Hasta cuándo seguirá la lluvia?",
+    "descripcion": "El tiempo estará inestable y con precipitaciones en gran parte de la provincia. ¿Se cumplirá el pronóstico de la llegada de la nieve?",
+    "categoria": 2,
+    "fecha": "2024-02-20",
+    "url_imagen": "./src/lluvia.jfif"
+  },
+  {
+    "titulo": "Uno por uno, los alimentos prohibidos para los perros y que jamás debés darles",
+    "descripcion": "Es de suma importancia prestar atención a la comida que se le proporciona a las mascotas, para asegurarse de ofrecerles una dieta equilibrada y segura; cuáles hay que quitarles de la dieta",
+    "categoria": 5,
+    "fecha": "2023-12-12",
+    "url_imagen": "./src/perros.jfif"
+  },
+  {
+    "titulo": "Educación y empleo: la experiencia de un argentino en una ONG internacional",
+    "descripcion": "Matías Figueroa, director del programa Europa de Ayuda en Acción. En diálogo con Cadena 3, reflexionó sobre políticas locales y su importancia.",
+    "categoria": 1,
+    "fecha": "2024-03-17",
+    "url_imagen": "./src/educacion.jpg"
+  },
+  {
+    "titulo": "Sale a la luz el Ecce Homo de Caravaggio",
+    "descripcion": "Apareció a la venta en una subasta con una base de 1.500 euros, pero terminó vendiéndose por 30 millones y los expertos calculan que su precio internacional supera los 100.",
+    "categoria": 3,
+    "fecha": "2024-05-12",
+    "url_imagen": "./src/ecceHomo.jfif"
+  },
+  {
+    "titulo": "La División Ciberdelitos alertó sobre una nueva modalidad de estafa",
+    "descripcion": "Luego de analizar una serie de estadísticas, la División Ciberdelitos de la policía detectó una nueva modalidad de ciberestafa.",
+    "categoria": 4,
+    "fecha": "2024-06-01",
+    "url_imagen": "./src/estafa.jpg"
+  },
+  {
+    "titulo": "SpaceX confirmó que ya prepara su cuarto vuelo de prueba al espacio con Starship",
+    "descripcion": "Elon Musk divulgó la noticia en sus redes sociales y señaló que ocurrirá dentro de tres a cinco semanas, con objetivos más ambiciosos que los de veces anteriores",
+    "categoria": 4,
+    "fecha": "2024-05-15",
+    "url_imagen": "./src/spaceX.png"
+  },
+  {
+    "titulo": "Hola mundo",
+    "descripcion": "Esteban",
+    "fecha": "2024-05-12",
+    "url_imagen": "/images/pugg.png"
+  }
 ]

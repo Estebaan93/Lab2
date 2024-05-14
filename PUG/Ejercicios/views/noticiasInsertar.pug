@@ -1,0 +1,25 @@
+doctype html
+html(lang="es")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Nueva Noticia
+		link(rel="stylesheet", href="/style.css")
+	body
+		footer
+			h1.h1NuevaNoticia Nueva noticia
+		main.mainFor
+			form.formularioNoticia(action='/noticias/agregar', method='POST', class='formAgregar')
+				label(for='titulo') Titulo:
+				input(type='text', id='titulo', name='titulo', required)
+				label(for='descripcion') Descripcion:
+				textarea(id='descripcion', name='descripcion', required)
+				label(for='categoria') Categoria:
+				select(name='categoria', id=categoria)
+					each categoria in categorias
+						option(value=categoria.id)=categoria.nombre
+				label(for='fecha') Fecha:
+				input(type='date', id='fecha', name='fecha', required)
+				label(for='url_imagen') URL de la imagen: ./scr/nuevaNoticia.jpg
+				input(type='text', id='url_imagen', name='url_imagen', required)
+				button(type='submit' class='buttonNuevaNoticia') Agregar
