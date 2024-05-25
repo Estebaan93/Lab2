@@ -1,0 +1,15 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Lista de pacientes
+    link(rel="stylesheet", href="/style.css")
+    link(rel="icon", type="image/png", href="/src/favicon.png")
+  body
+    h1 Lista de Pacientes
+    ul
+      each pac in paciente
+        li
+          |Id paciente: #{pac.id_paciente} - #{pac.nombre} - #{pac.apellido} - #{pac.documento} - #{pac.fecha_nacimiento}
+          a(href='/delete/${pac.id}') Eliminar

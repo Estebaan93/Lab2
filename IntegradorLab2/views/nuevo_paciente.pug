@@ -1,0 +1,22 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Nuevo paciente
+    link(rel="stylesheet", href="/style.css")
+    link(rel="icon", type="image/png", href="/src/favicon.png")
+  body
+    h1 Nuevo paciente
+    form(action="/nuevo_paciente/add", method="POST")
+      input(type="text", name="apellido", placeholder="Apellido", required=true)
+      input(type="text", name="nombre", placeholder="Nombre", required=true)
+      input(type="text", name="documento", placeholder="DNI")
+      label(for="fecha_nacimiento") Fecha de nacimiento:
+      input(type="date", name="fecha_nacimiento", placeholder="Fecha de nacimiento", required)
+      label(for="sexo") Sexo:
+      select(name="sexo", required=true)
+        option(value="M") M
+        option(value="F") F
+      input(type="text", name="id_obra_social", placeholder="Obra social")
+      button(type="submit") Añadir paciente
