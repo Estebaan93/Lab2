@@ -1,0 +1,31 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Gestion medica
+    link(rel="stylesheet", href="/style.css")
+    link(rel="icon", type="image/png", href="/src/favicon.png")
+  body
+    header 
+      div.divCabecera
+        a.logoInicio(href="/" class="logo")
+          img.imgLogo(src="/src/logo.png", alt="Logo")
+      nav.navHeader
+        ul.navUl
+          li
+            a(href="/") Inicio
+          li
+            a(href="#") Turnos
+            ul.turnosUl 
+              li
+                a(href="/buscarTurnos") Buscar
+              li
+                a(href="/nuevoTurno") Nuevo 
+          li
+            a(href="#") Paciente 
+            ul.pacienteUl
+              li
+                a(href="/lista_paciente") Buscar 
+              li
+                a(href="/nuevo_paciente") Nuevo

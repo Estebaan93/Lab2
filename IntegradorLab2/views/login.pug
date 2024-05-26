@@ -1,0 +1,13 @@
+doctype html 
+html 
+    head
+        title Login
+    body 
+        h1 Login
+        if error 
+            p.error= error 
+        form(action='/auth/login', method='POST')
+            input(type='text', name='username', placeholder='Username')
+            input(type='password', name='password', placeholder='Password') 
+            button (type='submit') Login
+        a(href='/auth/register') Register

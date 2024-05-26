@@ -6,11 +6,20 @@ const connection = mysql.createConnection({
   user: 'root',
   password: '',
   database: 'bit_laboratorio',
-  // port: 3306
+  // port: 3306   //Opcional no hace falta
 });
 
 
-const createConnection = () => {
+connection.connect((err)=>{
+  if(err){
+    console.error('Error conectandose a la base de datos:', err.stack);
+    return;
+  }
+  console.log('Conectandose a la base de datos con el id', connection.threadId);  
+});
+
+
+/*const createConnection = () => {
   return new Promise((resolve, reject) => {
     connection.connect((err) => {
       if (err) {
@@ -24,7 +33,7 @@ const createConnection = () => {
       }
     });
   });
-};
+};*/
 
 module.exports = {connection, createConnection};
 

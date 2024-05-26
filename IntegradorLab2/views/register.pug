@@ -1,0 +1,17 @@
+doctype html 
+html 
+  head 
+    title Registro 
+  body 
+    h1 Registrarse
+    form(action='/auth/register', method="post")
+      input(type="text", name="username" placeholder="Username")
+      input(type="password", name="password", placeholder="Password")
+      label(for='role') ROL:
+      select(name="'role")
+        option(value='admin') Administrador
+        option(value='profesional') Profesional
+      button(type='submit') Registrarse
+      a(href='/auth/login') Login
+
+

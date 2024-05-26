@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        title Dashboard
+    body
+        h1 Dashboard
+        p Bienvenido #{user.username}
+        if user.role == 'admin'
+            p Eres un administrador
+            // Aquí puedes agregar enlaces o funcionalidades específicas para el administrador
+        else if user.role == 'profesional'
+            p Eres un profesional
+            // Aquí puedes agregar enlaces o funcionalidades específicas para el profesional
+        a(href='/auth/logout') Logout
