@@ -8,12 +8,12 @@ router.get('/', indexController.showHomePage);
 router.get('/dashboard', ensureAuthenticated, indexController.showDashboard);
 
 // Ruta para la página de inicio
-router.get('/', (req, res) => {
-  res.render('index');
-});
+// router.get('/', (req, res) => {
+//   res.render('index');
+// });
 
-router.get('/nuevo_paciente',(req, res)=>{
- res.render('nuevo_paciente');
+router.get('/nuevoPaciente',(req, res)=>{
+ res.render('nuevoPaciente');
 });
 
 

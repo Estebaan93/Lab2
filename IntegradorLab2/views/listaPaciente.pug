@@ -12,4 +12,5 @@ html(lang="es")
       each pac in paciente
         li
           |Id paciente: #{pac.id_paciente} - #{pac.nombre} - #{pac.apellido} - #{pac.documento} - #{pac.fecha_nacimiento}
-          a(href='/delete/${pac.id}') Eliminar
+          a(href=`/delete/${pac.id}`) Eliminar
+

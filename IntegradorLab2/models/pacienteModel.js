@@ -27,7 +27,7 @@ const actualizarPaciente = (id_paciente, data, callback) => {
   const { nombre, apellido, dni, fecha_nac, sexo, obra_social, plan, estado } = data;
   connection.query(
     'UPDATE paciente SET nombre = ?, apellido = ?, documento = ?, fecha_nacimiento = ?, sexo = ?, id_obra_social = ?, plan = ?, estado = ? WHERE id_paciente = ?',
-    [nombre, apellido, dni, fecha_nac, sexo, obra_social, plan, estado, id_pac],
+    [nombre, apellido, dni, fecha_nac, sexo, obra_social, plan, estado, id_paciente],
     (err, results) => {
       if (err) {
         return callback(err);

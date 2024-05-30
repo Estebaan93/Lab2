@@ -1,6 +1,7 @@
 const indexController = {
     showHomePage: (req, res) => {
-        res.render('index', { user: req.session.user });
+        // res.render('index', { user: req.session.user });
+        res.render('index2', { user: req.session.user });
     },
     showDashboard: (req, res) => {
         if (!req.session.user) {

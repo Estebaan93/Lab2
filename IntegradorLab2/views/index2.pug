@@ -1,0 +1,25 @@
+doctype html
+html
+	head
+		title Bit laboratorio
+		link(rel="stylesheet", href="style.css")
+		link(rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css')
+	body
+		div.wrapper
+			form(action='/auth/register', method="post")
+				h1 Login
+				div.input-box
+					input(type="text", name="username", placeholder="Username", required)
+					i(class='bx bxs-user')
+				div.input-box
+					input(type="password", name="password", placeholder="Password", required)
+					i(class='bx bxs-lock-alt')
+				div.remember-forgot
+					label
+						input(type="checkbox") 
+						| Remember me
+					a(href='/auth/register') Olvide mi contraseña
+				button.btn(type="submit") Login
+				div.register-link
+					p No tiene usuario?
+						a(href="/auth/register")  Registrarse

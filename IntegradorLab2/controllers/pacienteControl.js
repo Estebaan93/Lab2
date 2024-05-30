@@ -28,16 +28,16 @@ exports.crearPaciente = (req, res) => {
 
 // Actualizar paciente
 exports.actualizarPaciente = (req, res) => {
-  const { id } = req.params;
-  const { nombre, apellido, dni, fecha_nac, sexo, obra_social, plan, estado } = req.body;
-  const data = { nombre, apellido, dni, fecha_nac, sexo, obra_social, plan, estado };
+  const {id_paciente} = req.params;
+  const {nombre, apellido, dni, fecha_nac, sexo, obra_social, plan, estado} = req.body;
+  const data = { nombre, apellido, dni, fecha_nac, sexo, obra_social, plan, estado};
   
-  Paciente.actualizarPaciente(id, data, (err, resultado) => {
+  Paciente.actualizarPaciente(id_paciente, data, (err, resultado) => {
     if (err) {
 
       return res.status(500).send(err);
     }
-    res.redirect('/ListarPacientes');
+    res.redirect('/listarPacientes');
   });
 };
 

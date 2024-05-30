@@ -15,11 +15,11 @@ connection.connect((err)=>{
     console.error('Error conectandose a la base de datos:', err.stack);
     return;
   }
-  console.log('Conectandose a la base de datos con el id', connection.threadId);  
+  // console.log('Conectandose a la base de datos con el id', connection.threadId);  
 });
 
 
-/*const createConnection = () => {
+const createConnection = () => {
   return new Promise((resolve, reject) => {
     connection.connect((err) => {
       if (err) {
@@ -33,7 +33,7 @@ connection.connect((err)=>{
       }
     });
   });
-};*/
+};
 
 module.exports = {connection, createConnection};
 

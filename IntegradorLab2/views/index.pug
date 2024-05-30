@@ -1,13 +1,18 @@
 doctype html 
 html 
-    head 
-        title Bit Laboratorio 
-    body 
-        if user 
-            h1 Bienbenido  user.username
-            a(href='/dashboard') Dasboard
-            a(href='/auth/logout') Logout 
-        else 
-            h1 Bienvenido 
-            a(href='/auth/login') Login 
-            a(href='/auth/register') Registrarse    
+  head 
+      title Bit Laboratorio
+      link(rel="stylesheet", href="style.css")
+  body 
+      if user 
+          h1 Bienvenido #{user.username}
+          a(href='/dashboard') Dasboard
+          a(href='/auth/logout') Logout 
+      else 
+          h1.Bienvenido Bienvenido
+          div.divInicio
+            button
+              a(href='/auth/login') Login 
+            br
+            button
+              a(href='/auth/register') Registrarse    
