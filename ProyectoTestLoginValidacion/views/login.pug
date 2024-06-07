@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title Inicio de Sesión
+  body
+    h1 Inicio de Sesión
+    form(action="/Usuarios/login" method="post")
+      label(for="usuario") Usuario:
+      input(type="text" name="usuario" required)
+      br
+      label(for="password") Contraseña:
+      input(type="password" name="password" required)
+      br
+      button(type="submit") Iniciar Sesión

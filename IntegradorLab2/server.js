@@ -12,7 +12,11 @@ const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
 
 // Conectar a la base de datos
-createConnection();
+createConnection().then(()=>{
+    console.log('Conexion a la base de datos establecida')
+    }).catch((err) => {
+    console.error('No se pudo conectar a la base de datos:', err);
+});
 
 app.set('view engine', 'pug');
 

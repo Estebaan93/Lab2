@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title Bienvenido
+  body
+    h1 Bienvenido a la Aplicación
+    if usuario
+      p Bienvenido, #{usuario}
+      a(href="/Usuarios/logout") Cerrar Sesión
+    else
+      a(href="/Usuarios/login") Iniciar Sesión
+      br
+      a(href="/Usuarios/registro") Registrarse

@@ -6,7 +6,7 @@ html
 		link(rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css')
 	body
 		div.wrapper
-			form(action='/auth/register', method="post")
+			form(action='/auth/indexMenu', method="post")
 				h1 Login
 				div.input-box
 					input(type="text", name="username", placeholder="Username", required)
@@ -17,7 +17,7 @@ html
 				div.remember-forgot
 					label
 						input(type="checkbox") 
-						| Remember me
+						| Recordarme
 					a(href='/auth/register') Olvide mi contraseña
 				button.btn(type="submit") Login
 				div.register-link

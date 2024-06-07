@@ -10,13 +10,13 @@ const connection = mysql.createConnection({
 });
 
 
-connection.connect((err)=>{
-  if(err){
-    console.error('Error conectandose a la base de datos:', err.stack);
-    return;
-  }
-  // console.log('Conectandose a la base de datos con el id', connection.threadId);  
-});
+// connection.connect((err)=>{
+//   if(err){
+//     console.error('Error conectandose a la base de datos:', err.stack);
+//     return;
+//   }
+//   // console.log('Conectandose a la base de datos con el id', connection.threadId);  
+// });
 
 
 const createConnection = () => {
