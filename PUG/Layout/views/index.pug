@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h2 Listado de Pacientes
+  p Bienvenido al consultorio médico.
+
+  // Formulario de búsqueda
+  form#search-form
+    input#search-input(type="text" placeholder="Buscar por nombre, apellido o documento...")
+    ul#patients-list
+      each patient in patients
+        li(data-name=patient.nombre + ' ' + patient.apellido)= patient.nombre + ' ' + patient.apellido + ' - Documento: ' + patient.documento
+
+block sidebar
+  h3 Noticias Recientes
+  p No hay noticias hoy.
+
+block scripts
+  script(src="/javascripts/home.js")

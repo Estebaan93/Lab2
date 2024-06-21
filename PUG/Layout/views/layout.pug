@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/stylesheets/style.css")
+  body
+    header
+      h1 Consultorio Médico
+      nav
+        ul
+          li: a(href="/") Home
+          li: a(href="/about") About
+          li: a(href="/contact") Contact
+    div.container
+      aside
+        block sidebar
+      main
+        block content
+    footer
+      p &copy; 2024 Consultorio Médico
+    block scripts
