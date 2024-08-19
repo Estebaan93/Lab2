@@ -1,0 +1,22 @@
+//vista/pacientes.pug
+doctype html
+html
+ head
+  title Pacientes
+ body
+  h1 Lista de pacientes
+  if pacientes.length
+   table(border=1)
+    thead
+     tr
+      th ID paciente
+      th Nombre
+      th Apellido
+     tbody
+      each paciente in pacientes
+       tr
+        td=paciente.id_paciente
+        td=paciente.nombre
+        td=paciente.apellido
+  else
+   p No se encontraron pacientes.

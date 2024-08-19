@@ -1,0 +1,28 @@
+//vista/medicamentos.pug
+doctype html
+html
+ head
+  title Medicamentos
+ body
+  h1 Lista de Medicamentos
+  if medicamentos.length
+   table(border="1")
+    thead
+     tr
+      th ID medicamento
+      th Nombre generico
+      th Nombre comercial
+      th Activo
+      th Categoria
+      th Familia
+    tbody
+     each medicamento in medicamentos
+      tr
+       td=medicamento.id_medicamento
+       td=medicamento.nombre_generico
+       td=medicamento.nombre_comercial
+       td=medicamento.activo
+       td=medicamento.categoria
+       td=medicamento.familia
+  else
+    p No se encontraron medicamentos. 

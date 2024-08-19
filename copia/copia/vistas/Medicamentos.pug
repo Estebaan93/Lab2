@@ -1,0 +1,39 @@
+//medicamentos.pug
+doctype html
+html
+ head
+  title Medicamentos
+  link(rel="stylesheet," href="/stylesheets/medicamentos.ccs")
+ body
+ .container
+  .sidebar
+    h2 Opciones
+    button(onclick="toggleSection('agregar-paciente-section')") Agregar medicamento
+    button(onclick="toggleSection('lista-medicamentos-section')") Lista de medicamentos
+    button(onclick="window.location.href='/Pacientes/buscar'") Buscar medicamentos
+    button(onclick="window.location.href='/sala'") Regresar a Página Principal
+  .main-content
+   .header
+    h1 MEDICAMENTOS
+    //img
+    //Ver medicamentos
+    .section#lista-medicamentos-section
+      h2 Lista de medicamentos
+      table
+       thead
+        tr
+         th Id dedicamento
+         th Nombre generico
+         th Nombre Comercial
+         th Id categoria
+         th Id familia
+         th Estado
+        tbody#listadoMedicamentos
+         each data in medicamentos
+          tr
+           td=data.id_medicamento
+           td=data.nombre_generico
+           td=data.nombre_comercial
+           td=data.id_categoria
+           td=data.estado
+
