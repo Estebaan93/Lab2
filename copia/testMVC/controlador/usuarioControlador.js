@@ -10,3 +10,6 @@ exports.mostrarRegistro = (req, res) => {
 };
 
 //Funcion para registrar nuevos usuarios
+exports.registrarUsuario= async(req,res)=>{
+  const {nombre, apellido, funcion, usuario, password, documento}= req.body;
+}
