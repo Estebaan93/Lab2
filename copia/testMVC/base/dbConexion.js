@@ -7,7 +7,7 @@ async function createConnection(){
   const connection= await mysql.createConnection({
    host: 'localhost',
    user: 'root',
-   password: '',
+   password: 'root',
    database: 'centro_sams'
   });
  console.log('Conexion exitosa a la base de datos');
