@@ -1,0 +1,30 @@
+//- Formulario para crear medicamento
+form(action="/guardarMedicamento" method="POST")
+    .form-row
+        label(for="nombre_generico") Nombre Genérico:
+        input(type="text" id="nombre_generico" name="nombre_generico" required)
+
+    .form-row
+        label(for="nombre_comercial") Nombre Comercial:
+        input(type="text" id="nombre_comercial" name="nombre_comercial" required)
+
+    .form-row
+        label(for="id_categoria") Categoría:
+        select(id="id_categoria", name="id_categoria", required)
+            option(value="", disabled, selected) Seleccione una opción
+            each categoria in categorias
+                option(value=categoria.id_categoria)= categoria.categoria
+
+    .form-row
+        label(for="id_familia") Familia:
+        select(id="id_familia", name="id_familia", required)
+            option(value="", disabled, selected) Seleccione una opción
+            each familia in familias
+                option(value=familia.id_familia)= familia.familia
+
+    .form-row
+        label(for="activo") Activo:
+        input(type="checkbox" id="activo" name="activo" value="1")
+
+    .form-row
+        button(type="submit") Guardar Medicamento

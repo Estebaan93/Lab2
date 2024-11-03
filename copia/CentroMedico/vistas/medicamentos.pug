@@ -1,0 +1,110 @@
+//medicamentos.pug
+doctype html
+html(lang="es")
+  head
+    title Gestión de Medicamentos 
+    link(rel="stylesheet", href="/stylesheets/medicamentos.css")
+  body
+    .container
+      .sidebar
+        h2 Opciones
+        button(onclick="window.location.href='medicamentos/crearMedicamento'") Cargar medicamentos
+        button(onclick="toggleSection('lista-medicamentos-section')") Ver Lista de Medicamentos
+        button(onclick="window.location.href='/medicamentos/buscar'") Buscar Medicamento
+        button(onclick="window.location.href='/sala'") Regresar a Página Principal
+
+      .main-content
+        .header
+          h1 GESTIÓN DE MEDICAMENTOS
+          img(src="/imag/logo_medicamentos.png", alt="Logo de medicamentos")
+
+        // Formulario para agregar nuevo medicamento
+        .section#agregar-medicamento-section(style="display: none;")
+          h2 Agregar Nuevo Medicamento
+          form#formulario(action="/medicamentos", method="POST")
+            .form-row
+              label(for="nombre_generico") Nombre Genérico:
+              input(type="text", id="nombre_generico", name="nombre_generico", required)
+            .form-row
+              label(for="nombre_comercial") Nombre Comercial:
+              input(type="text", id="nombre_comercial", name="nombre_comercial", required)
+            .form-row
+              label(for="categoria") Categoría:
+              input(type="text", id="categoria", name="categoria", required)
+            .form-row
+              label(for="familia") Familia:
+              input(type="text", id="familia", name="familia", required)
+            .form-row
+              label(for="activo") Activo:
+              select(id="activo", name="activo", required)
+                option(value="", disabled, selected) Seleccione una opción
+                option(value="1") Sí
+                option(value="0") No
+            .form-row
+              button(type="submit") Agregar Medicamento
+
+        // Lista de medicamentos
+        .section#lista-medicamentos-section(style="display: none;")
+          h2 Lista de Medicamentos
+          table
+            thead
+              tr
+                th Nombre Genérico
+                th Nombre Comercial
+                th Categoría
+                th Familia
+                th Activo
+                th Acciones
+            tbody#listadoMedicamentos
+              each medicamento in medicamentos
+                tr
+                  td= medicamento.nombre_generico
+                  td= medicamento.nombre_comercial
+                  td= medicamento.categoria
+                  td= medicamento.familia
+                  td= medicamento.activo ? 'Sí' : 'No'
+                  td.actions
+                    if usuario && usuario.funcion == 'administrador'
+                      button(onclick=`window.location.href='/medicamentos/editar/${medicamento.id_medicamento}'`) Editar
+                      form(action=`/medicamentos/eliminar/${medicamento.id_medicamento}`, method="POST", onsubmit="return confirm('¿Estás seguro de que quieres eliminar este medicamento?');")
+                        button(type="submit") Eliminar
+                    else
+                      button(type="button", disabled) Editar
+                      button(type="button", disabled) Eliminar
+
+    script.
+      function toggleSection(sectionId) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => section.style.display = 'none');
+        document.getElementById(sectionId).style.display = 'block';
+      }
+
+      function editarMedicamento(id) {
+        window.location.href = `/medicamentos/editar/${id}`;
+      }
+
+      function eliminarMedicamento(id) {
+        if (confirm('¿Estás seguro de que quieres eliminar este medicamento?')) {
+          fetch(`/medicamentos/${id}`, {
+            method: 'DELETE'
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.mensaje) {
+              alert(data.mensaje);
+              location.reload();
+            } else {
+              alert('Error al eliminar el medicamento');
+            }
+          })
+          .catch(error => console.error('Error:', error));
+        }
+      }
+
+      window.onload = function() {
+        const params = new URLSearchParams(window.location.search);
+        const mensajeExito = params.get('mensajeExito');
+        if (mensajeExito && (mensajeExito.includes("agregado") || mensajeExito.includes("editado") || mensajeExito.includes("eliminado"))) {
+          alert(mensajeExito);
+        }
+      }

@@ -1,0 +1,62 @@
+doctype html
+html
+    head
+        title Buscar Medicamento
+        link(rel="stylesheet" href="/stylesheets/buscarMedicamento.css")
+        script.
+            function limpiarCampo() {
+                document.getElementById('filtroInput').value = '';
+            }
+
+            function limpiarListado() {
+                var listadoMedicamentos = document.getElementById('listadoMedicamentos');
+                while (listadoMedicamentos.firstChild) {
+                    listadoMedicamentos.removeChild(listadoMedicamentos.firstChild);
+                }
+            }
+    body
+        .container
+            h1 GESTIÓN DE MEDICAMENTOS
+
+            form(id="searchForm", class="search-form", action="/medicamentos/buscar", method="get")
+                input(type="text", id="filtroInput", name="filtro", placeholder="Buscar por nombre genérico, comercial, categoría, familia", value=filtro, class="search-input")
+                button(type="submit", class="search-button") Buscar
+                button(type="button", onclick="limpiarCampo(); limpiarListado();", class="clear-button") Limpiar
+                a(href="/medicamentos", class="main-link") Página Principal
+
+            if medicamentos.length > 0
+                table(id="listadoMedicamentos", class="medicamento-table")
+                    thead
+                        tr
+                            th ID
+                            th Nombre Genérico
+                            th Nombre Comercial
+                            th Categoría
+                            th Familia
+                            th Activo
+                            th Acciones
+                    tbody
+                        each medicamento in medicamentos
+                            tr
+                                td= medicamento.id_medicamento
+                                td= medicamento.nombre_generico
+                                td= medicamento.nombre_comercial
+                                td= medicamento.categoria
+                                td= medicamento.familia
+                                td= medicamento.activo ? 'Sí' : 'No'
+                                td.actions
+                                    button(onclick=`window.location.href='/medicamentos/editar/${medicamento.id_medicamento}'`, class="edit-button") Editar
+                                    form(action=`/medicamentos/eliminar/${medicamento.id_medicamento}`, method="POST", onsubmit="return confirm('¿Estás seguro de que quieres eliminar este medicamento?');")
+                                        button(type="submit", class="delete-button") Eliminar
+            else
+                if mensaje
+                    p= mensaje
+
+        script.
+            document.getElementById('searchForm').addEventListener('submit', function(event) {
+                const filtroInput = document.getElementById('filtroInput').value.trim();
+                if (!filtroInput) {
+                    event.preventDefault();
+                    alert('Por favor, ingrese un filtro de búsqueda.');
+                }
+            });
